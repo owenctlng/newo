@@ -14,29 +14,47 @@
 <body>
   <div class="grid-container">
 
+    <h1>PORTFOLIO</h1>
+
     <div class="header">
       <ul>
         <li><a href="#">PORTFOLIO</a></li>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">CONTACT</a></li>
+        <li><a href="index.html" id="active-btn">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
       </ul>
       <i class="fa-solid fa-bars menu-bar"></i>
     </div>
 
     <div class="profile">
       <img src="Pic.jpg" alt="">
-        <p id="role">Aspiring Web Developer</p>
+      <p id="role">Aspiring Web Developer</p>
     </div>
 
     <div class="texts">
       <ul>
-        <li>HI, I’M OWEN! </li>
+        <li>HI, I’M OWEN!</li>
         <li>"I am always doing that which I cannot <br> do, in order that I may learn how to do it."</li>
         <li>– Pablo Picasso</li>
       </ul>
     </div>
-    
+
   </div>
+  
+<script>
+  const menuBar = document.querySelector('.menu-bar');
+  const menuItems = document.querySelectorAll('.header li:nth-child(2), .header li:nth-child(3), .header li:nth-child(4)');
+
+  menuBar.addEventListener('click', () => {
+    menuItems.forEach(item => {
+      if (item.style.display === "block") {
+        item.style.display = "none";
+      } else {
+        item.style.display = "block";
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
